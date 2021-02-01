@@ -1,47 +1,117 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import NextLink from 'next/link'
+import { Flex, Image, Text, Link, useColorModeValue } from '@chakra-ui/react'
 
 import { MdMail } from 'react-icons/md'
 import { FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa'
 
-
 export default function Home() {
+  const textColor = useColorModeValue("gray.900", "gray.400")
+
   return (
     <div>
       <Head>
         <title>Renato Hideki Osaka</title>
       </Head>
 
-      <main className="flex justify-center items-center h-screen antialiased">
-        <div className="flex flex-col justify-center items-center p-4">
-          <img src='https://github.com/renatoosaka.png'  width={150} height={150} alt='Renato Hideki Osaka' className="rounded-full" />
-          <h1 className="font-medium text-2xl text-gray-900 dark:text-gray-400 self-center mt-4">Renato Hideki Osaka</h1>
-          <p className="dark:text-gray-400 mt-4 leading-6 text-center">Sou dev, faço umas paradas maneiras com Node.js ReactJS e React Native</p>
-          <p className="dark:text-gray-400 leading-6 text-center">Ahh estou aprendendo Go, muito massinha!</p>
-          <div className="flex flex-row mt-4">
-            <Link href="https://github.com/renatoosaka/">
-              <a className="dark:text-gray-400 ml-4 dark:hover:text-gray-200 transition">
+      <Flex
+        justifyContent={"center"}
+        alignItems={"center"}
+        height={"100vh"}
+      >
+        <Flex
+          direction={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          p={4}
+        >
+          <Image
+            src='https://github.com/renatoosaka.png'
+            width={150}
+            height={150}
+            alt='Renato Hideki Osaka'
+            borderRadius={"50%"}/>
+          <Text
+            fontSize={"3xl"}
+            fontWeight={"bold"}
+            textColor={textColor}
+            letterSpacing={"tight"}
+            mt={4}
+          >
+            Renato Hideki Osaka
+          </Text>
+          <Text
+            textAlign={"center"}
+            textColor={textColor}
+            mt={4}
+            lineHeight={"base"}
+          >
+            Sou dev, faço umas paradas maneiras com Node.js ReactJS e React Native
+          </Text>
+          <Text
+            textAlign={"center"}
+            textColor={textColor}
+            mt={4}
+            lineHeight={"base"}
+          >
+            Ahh estou aprendendo Go, muito massinha!
+          </Text>
+          <Flex direction={"row"} mt={4}>
+            <NextLink href="https://github.com/renatoosaka/">
+              <Link
+                textColor={textColor}
+                ml={4}
+                transition={"all"}
+                transitionDuration={"0.25s"}
+                _hover={{
+                  opacity: 0.75
+                }}
+              >
                 <FaGithub size={20} />
-              </a>
-            </Link>
-            <Link href="https://www.linkedin.com/in/renato-hideki-osaka/">
-              <a className="dark:text-gray-400 ml-4 dark:hover:text-gray-200 transition">
+              </Link>
+            </NextLink>
+            <NextLink href="https://www.linkedin.com/in/renato-hideki-osaka/">
+              <Link
+                textColor={textColor}
+                ml={4}
+                transition={"all"}
+                transitionDuration={"0.25s"}
+                _hover={{
+                  opacity: 0.75
+                }}
+              >
                 <FaLinkedin size={20} />
-              </a>
-            </Link>
-            <Link href="https://twitter.com/renato_osaka">
-              <a className="dark:text-gray-400 ml-4 dark:hover:text-gray-200 transition">
+              </Link>
+            </NextLink>
+            <NextLink href="https://twitter.com/renato_osaka">
+              <Link
+                textColor={textColor}
+                ml={4}
+                transition={"all"}
+                transitionDuration={"0.25s"}
+                _hover={{
+                  opacity: 0.75
+                }}
+              >
                 <FaTwitter size={20} />
-              </a>
-            </Link>
-            <Link href="mailto:oi@renatohidekiosaka.com.br">
-              <a className="dark:text-gray-400 ml-4 dark:hover:text-gray-200 transition">
+              </Link>
+            </NextLink>
+            <NextLink href="mailto:oi@renatohidekiosaka.com.br">
+              <Link
+                textColor={textColor}
+                ml={4}
+                transition={"all"}
+                transitionDuration={"0.25s"}
+                _hover={{
+                  opacity: 0.75
+                }}
+              >
                 <MdMail size={20} />
-              </a>
-            </Link>
-          </div>
-        </div>
-      </main>
+              </Link>
+            </NextLink>
+          </Flex>
+        </Flex>
+      </Flex>
     </div>
   )
 }
