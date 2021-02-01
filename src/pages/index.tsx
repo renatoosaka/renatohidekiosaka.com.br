@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import NextLink from 'next/link'
 import { Flex, Image, Text, Link, useColorModeValue } from '@chakra-ui/react'
 
 import { MdMail } from 'react-icons/md'
@@ -57,58 +56,54 @@ export default function Home() {
             Ahh estou aprendendo Go, muito massinha!
           </Text>
           <Flex direction={"row"} mt={4}>
-            <NextLink href="https://github.com/renatoosaka/">
-              <Link
-                textColor={textColor}
-                ml={4}
-                transition={"all"}
-                transitionDuration={"0.25s"}
-                _hover={{
-                  opacity: 0.75
-                }}
-              >
-                <FaGithub size={20} />
-              </Link>
-            </NextLink>
-            <NextLink href="https://www.linkedin.com/in/renato-hideki-osaka/">
-              <Link
-                textColor={textColor}
-                ml={4}
-                transition={"all"}
-                transitionDuration={"0.25s"}
-                _hover={{
-                  opacity: 0.75
-                }}
-              >
-                <FaLinkedin size={20} />
-              </Link>
-            </NextLink>
-            <NextLink href="https://twitter.com/renato_osaka">
-              <Link
-                textColor={textColor}
-                ml={4}
-                transition={"all"}
-                transitionDuration={"0.25s"}
-                _hover={{
-                  opacity: 0.75
-                }}
-              >
-                <FaTwitter size={20} />
-              </Link>
-            </NextLink>
-            <NextLink href="mailto:oi@renatohidekiosaka.com.br">
-              <Link
-                textColor={textColor}
-                ml={4}
-                transition={"all"}
-                transitionDuration={"0.25s"}
-                _hover={{
-                  opacity: 0.75
-                }}
-              >
-                <MdMail size={20} />
-              </Link>
-            </NextLink>
+            <Link
+              href="https://github.com/renatoosaka/"
+              textColor={textColor}
+              ml={4}
+              transition={"all"}
+              transitionDuration={"0.25s"}
+              _hover={{
+                opacity: 0.75
+              }}
+            >
+              <FaGithub size={20} />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/renato-hideki-osaka/"
+              textColor={textColor}
+              ml={4}
+              transition={"all"}
+              transitionDuration={"0.25s"}
+              _hover={{
+                opacity: 0.75
+              }}
+            >
+              <FaLinkedin size={20} />
+            </Link>
+            <Link
+              href="https://twitter.com/renato_osaka"
+              textColor={textColor}
+              ml={4}
+              transition={"all"}
+              transitionDuration={"0.25s"}
+              _hover={{
+                opacity: 0.75
+              }}
+            >
+              <FaTwitter size={20} />
+            </Link>
+            <Link
+              href="mailto:oi@renatohidekiosaka.com.br"
+              textColor={textColor}
+              ml={4}
+              transition={"all"}
+              transitionDuration={"0.25s"}
+              _hover={{
+                opacity: 0.75
+              }}
+            >
+              <MdMail size={20} />
+            </Link>
           </Flex>
         </Flex>
       </Flex>
