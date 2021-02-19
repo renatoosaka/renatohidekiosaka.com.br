@@ -69,7 +69,7 @@ export default function Home() {
               <FaGithub size={20} />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/renato-hideki-osaka/"
+              href="https://www.linkedin.com/in/renatohidekiosaka/"
               textColor={textColor}
               ml={4}
               transition={"all"}
@@ -81,7 +81,7 @@ export default function Home() {
               <FaLinkedin size={20} />
             </Link>
             <Link
-              href="https://twitter.com/renato_osaka"
+              href="https://twitter.com/renato_osaka/"
               textColor={textColor}
               ml={4}
               transition={"all"}
